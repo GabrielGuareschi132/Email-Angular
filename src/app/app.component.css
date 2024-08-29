@@ -1,16 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Spice&display=swap");
+
+/* Define o fundo preto para toda a página */
+body {
+  position: relative;
+  overflow: hidden;
+  background-color: #000000; /* Fundo preto */
+  background-image: url(/assets/fundologin.jpg); /* Imagem de fundo */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #ffffff; /* Texto branco padrão */
+  font-family: "Bebas Neue", sans-serif; /* Fonte personalizada */
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 50px auto;
+  padding: 50px;
+  background-color: #303030; /* Fundo cinza escuro para o formulário */
+  color: #ffffff; /* Texto branco */
+  border-radius: 20px; /* Borda arredondada */
+  box-shadow: 0 0px 10px 0 #FF6000; /* Sombra com cor laranja */
+}
+
+h2 {
+  text-align: center;
+  font-family: "Bungee Spice", sans-serif; /* Fonte personalizada */
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff; /* Texto do título branco */
 }
 
 .form-group {
   margin-bottom: 15px;
+  padding: 10px;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
+  color: #ffffff; /* Cor dos labels */
 }
 
 input,
@@ -18,8 +50,103 @@ textarea {
   width: 100%;
   padding: 10px;
   font-size: 16px;
+  background-color: #1E1E1E; /* Fundo dos campos */
+  border: 1px solid #ddd; /* Borda clara */
+  color: #ffffff; /* Texto branco */
+  border-radius: 5px; /* Arredondar cantos */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #35424a;
+  box-shadow: 0 0 8px rgba(53, 66, 74, 0.3); /* Efeito ao focar no campo */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaaaaa; /* Placeholder em cinza claro */
 }
 
 button {
   margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff600f; /* Fundo do botão laranja */
+  color: #ffffff; /* Texto do botão branco */
+  font-size: 16px;
+  border: none;
+  border-radius: 15px; /* Arredondar cantos */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e8491d; /* Fundo do botão ao passar o mouse */
+  color: #ffffff; /* Texto do botão ao passar o mouse */
+}
+
+/* Ajustes adicionais para FAQs (se aplicável) */
+.faq {
+  background: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0px 8px 0 #FF6000;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq:hover {
+  background: #303030;
+}
+
+.faq p {
+  margin: 0;
+  color: #ddd;
+}
+
+.faq-question-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question {
+  font-weight: bold;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  color: #ddd;
+  font-size: 20px;
+}
+
+.arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+}
+
+.faq-answer.show {
+  display: block;
+}
+
+.faq-answer {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.faq-answer p {
+  margin-bottom: 1em;
 }
